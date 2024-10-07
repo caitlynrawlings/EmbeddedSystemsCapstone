@@ -29,9 +29,7 @@ export function NavBar() {
                 onClick={() => editIsOpen(!isOpen)}
                 className={`h-10 w-10 justify-center items-center rounded-md flex-col gap-1.5 flex`}
             >
-                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
-                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
-                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
+                {Array.apply(null, Array(3)).map((_, index) => {return (<div key={index} className={`w-8 bg-blue-50 h-1 rounded-xs`}/>) })}
             </button>
         )
     }
