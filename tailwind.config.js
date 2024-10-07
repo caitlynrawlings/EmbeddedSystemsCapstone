@@ -16,6 +16,9 @@ module.exports = {
       rotate: {
         '135': '135deg',  // Add custom rotate value
       },
+      borderRadius: {
+        'xs': '0.07rem',
+      },
     },
   },
   plugins: [],

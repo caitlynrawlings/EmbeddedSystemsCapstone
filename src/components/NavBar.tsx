@@ -29,17 +29,18 @@ export function NavBar() {
                 onClick={() => editIsOpen(!isOpen)}
                 className={`h-10 w-10 justify-center items-center rounded-md flex-col gap-1.5 flex`}
             >
-                <div className={`w-8 bg-blue-950 h-1`}/>
-                <div className={`w-8 bg-blue-950 h-1`}/>
-                <div className={`w-8 bg-blue-950 h-1`}/>
+                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
+                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
+                <div className={`w-8 bg-blue-50 h-1 rounded-xs`}/>
             </button>
         )
     }
 
     return (
         <>
+            {/* for medium size screens */}
             <nav 
-                className={`bg-blue-950 py-4 px-6 border-slate-300 text-nowrap 
+                className={`bg-blue-950 h-16 px-6 border-slate-300 text-nowrap 
                     md:flex flex-row w-full border-b hidden`}
             >
                 <button onClick={() => navigate("/")} className={`text-left text-blue-50 font-thin mr-8 text-2xl`}>UW CSE/ECE 475</button>
@@ -47,15 +48,20 @@ export function NavBar() {
                     {sections.map((section) => navBarButton(section))}
                 </div>
             </nav>
-            <header className={`flex flex-row mt-5 ml-5 items-center gap-4 md:hidden`}>
-                {openMenuButton()}
-                <button onClick={() => navigate("/")} className={`text-lef font-thin text-2xl`}>UW CSE/ECE 475</button>
+
+
+            {/* for small screens */}
+            <header className={`md:hidden h-16 px-4 bg-blue-950 border-slate-300 border-b`}>
+                <div className=" flex flex-row h-full items-center gap-4">
+                    {openMenuButton()}
+                    <button onClick={() => navigate("/")} className={`text-lef text-blue-50 font-thin text-2xl`}>UW CSE/ECE 475</button>
+                </div>
             </header>
             
             <div className={`w-full h-full bg-opacity-50 bg-slate-400 fixed md:hidden ${!isOpen && "hidden"}`}>
                 <nav 
-                    className={`bg-blue-950 py-4 pl-3 pr-16 border-slate-300 text-nowrap fixed
-                        md:hidden flex-col h-full border-r ${isOpen ? "flex" : "hidden"}`}
+                    className={`bg-blue-950 py-4 pl-3 pr-16 text-nowrap fixed
+                        md:hidden flex-col h-full ${isOpen ? "flex" : "hidden"}`}
                 >
                     <div className={`flex flex-col gap-3 `}>
                         <button 
