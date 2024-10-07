@@ -7,6 +7,7 @@ import { Notes } from './pages/Notes.tsx';
 import { Testing } from './pages/Testing.tsx';
 import { Debugging } from './pages/Debugging.tsx';
 import { WeeklyNotebook } from './pages/WeeklyNotebook.tsx';
+import { PageLayout } from './components/PageLayout.tsx';
 
 
 function App() {
@@ -14,13 +15,13 @@ function App() {
     <div className='h-screen flex flex-col'>
       <Router>
         <NavBar/> 
-        <div className='p-5 w-full'>
+        <div className='py-5 px-6 w-full font-light items-center flex flex-col'>
           <Routes>
-            <Route path={"/"} element={<Overview />} />
-            <Route path={`/notes`} element={<Notes />} />
-            <Route path={`/testing`} element={<Testing />} />
-            <Route path={`/debugging`} element={<Debugging />} />
-            <Route path={`/weeklynotebook`} element={<WeeklyNotebook />} />
+            <Route path={"/"} element={<PageLayout title="Embedded Systems Capstone" content={<Overview />}/>} />
+            <Route path={`/notes`} element={<PageLayout title="Notes" content={<Notes />}/>} />
+            <Route path={`/testing`} element={<PageLayout title="Testing" content={<Testing />}/>} />
+            <Route path={`/debugging`} element={<PageLayout title="Debugging" content={<Debugging />}/>} />
+            <Route path={`/weeklynotebook`} element={<PageLayout title="Weekly Notebook" content={<WeeklyNotebook />}/>} />
           </Routes>
         </div>
       </Router>
