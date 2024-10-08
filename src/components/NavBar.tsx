@@ -38,8 +38,8 @@ export function NavBar() {
         <>
             {/* for medium size screens */}
             <nav 
-                className={`bg-blue-950 h-16 px-6 border-slate-300 text-nowrap 
-                    md:flex flex-row w-full border-b hidden`}
+                className={`bg-blue-950 h-16 px-6 border-black text-nowrap 
+                    md:flex flex-row w-full border-b hidden fixed`}
             >
                 <button onClick={() => navigate("/")} className={`text-left text-blue-50 font-thin mr-8 text-2xl`}>UW CSE/ECE 475</button>
                 <div className={`flex flex-row ml-auto gap-3`}>
@@ -49,7 +49,7 @@ export function NavBar() {
 
 
             {/* for small screens */}
-            <header className={`md:hidden h-16 px-4 bg-blue-950 border-slate-300 border-b`}>
+            <header className={`md:hidden h-16 px-4 bg-blue-950 border-black border-b fixed w-full`}>
                 <div className=" flex flex-row h-full items-center gap-4">
                     {openMenuButton()}
                     <button onClick={() => navigate("/")} className={`text-lef text-blue-50 font-thin text-2xl`}>UW CSE/ECE 475</button>

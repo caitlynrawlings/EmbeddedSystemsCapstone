@@ -10,8 +10,8 @@ module.exports = {
       },
       fontWeight: {
         'h1': '400',     // Custom font weight for h1 (bold)
-        'h2': '300',     // Custom font weight for h2 (semi-bold)
-        'h3': '300',     // Custom font weight for h3 (medium)
+        'h2': '400',     // Custom font weight for h2 (semi-bold)
+        'h3': '400',     // Custom font weight for h3 (medium)
       },
       rotate: {
         '135': '135deg',  // Add custom rotate value
