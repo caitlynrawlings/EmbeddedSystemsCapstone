@@ -17,7 +17,7 @@ function App() {
         <NavBar/> 
         <div className='py-5 px-6 w-full font-light items-center flex flex-col'>
           <Routes>
-            <Route path={"/"} element={<PageLayout title="Embedded Systems Capstone" content={<Overview />}/>} />
+            <Route path={"/"} element={<PageLayout title="Embedded Systems Capstone Project Website" content={<Overview />}/>} />
             <Route path={`/notes`} element={<PageLayout title="Notes" content={<Notes />}/>} />
             <Route path={`/testing`} element={<PageLayout title="Testing" content={<Testing />}/>} />
             <Route path={`/debugging`} element={<PageLayout title="Debugging" content={<Debugging />}/>} />
