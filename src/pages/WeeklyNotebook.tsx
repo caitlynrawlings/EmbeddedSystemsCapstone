@@ -56,14 +56,17 @@ const EntryLayout = (week: entry) => {
                     )
                 })}
 
-                <h3 className="font-h3 text-h3 mb-2 mt-3">Sources</h3>
-                <ol className="">
-                    {week.sources.map((s, index) => {
-                        return (
-                            <li>{`(${index+1}) ${s}`}</li>
-                        )
-                    })}
-                </ol>
+                <div className={`${week.sources.length ? "block" : "hidden"} w-full`}>
+                    <h3 className="font-h3 text-h3 mb-2 mt-3">Sources</h3>
+                    <ol className="">
+                        {week.sources.map((s, index) => {
+                            return (
+                                <li>{`(${index+1}) ${s}`}</li>
+                            )
+                        })}
+                    </ol>
+                </div>
+
             </div>
         </section>
     )
