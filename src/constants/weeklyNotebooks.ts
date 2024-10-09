@@ -6,6 +6,29 @@ export type entry = {
     individualContributions : {name: string, work: string}[],
     sources : string[]
 }
+
+///////////////////////////////////////////
+// Blank notebook entry
+///////////////////////////////////////////
+// {
+//     day : "",
+//     plans: [
+//         ""
+//     ],
+//     summary : [
+//         ""
+//     ],
+//     images : [], 
+//     individualContributions : [
+//         {name: "Anderson", work: ""},
+//         {name: "Caitlyn", work: ""},
+//         {name: "Zach", work: ""},
+//         {name: "Nicholas", work: ""},
+//     ],
+//     sources : [
+//     ]
+// },
+
 export const weeklyNotebooks : entry[] = [
     {
         day : "October 4th",
@@ -36,6 +59,24 @@ export const weeklyNotebooks : entry[] = [
             "https://www.youtube.com/watch?v=1MaKGCPNSJA",
             "https://www.instructables.com/Wireless-Mouse-Glove-1/"
         ]
+    },
+    {
+        day : "October 11th",
+        plans: [
+            ""
+        ],
+        summary : [
+            "We ordered items, indcluding"
+
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: "Ordered items."},
+            {name: "Caitlyn", work: ""},
+            {name: "Zach", work: ""},
+            {name: "Nicholas", work: ""},
+        ],
+        sources : []
     },
 
 ]
