@@ -1,19 +1,21 @@
 import React from "react";
 import { assignments } from "../constants/assignments.ts";
+import { useNavigate  } from "react-router-dom";
 
 export function Assignments() {
+    const navigate = useNavigate();
 
     const assignmentComponent = (assignment) => {
         return (
             <div>
                 <div className="flex flex-row items-end my-1 gap-4">
                     <h2 className="font-h2 text-h2 text-nowrap">
-                        <a 
-                            href={`/#/assignments/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`}
+                        <button 
+                            onClick={() => navigate(`/assignments/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`)}
                             className="underline text-blue-800 hover:text-blue-600" 
                         >
                             {assignment.name}
-                        </a>
+                        </button>
                     </h2>
                 </div>
                 <p className="mb-2">{assignment.description}</p>
