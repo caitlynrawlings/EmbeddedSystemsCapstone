@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       fontSize: {
         'h1': '2.5rem',  // Custom size for h1
-        'h2': '2rem',    // Custom size for h2
-        'h3': '1.5rem', // Custom size for h3
+        'h2': '1.5rem',    // Custom size for h2
+        'h3': '1.2rem', // Custom size for h3
       },
       fontWeight: {
         'h1': '400',     // Custom font weight for h1 (bold)

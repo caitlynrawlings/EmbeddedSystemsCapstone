@@ -5,9 +5,9 @@ import { Overview } from './pages/Overview.tsx';
 import { NavBar } from './components/NavBar.tsx';
 import { Notes } from './pages/Notes.tsx';
 import { Testing } from './pages/Testing.tsx';
-import { Debugging } from './pages/Debugging.tsx';
 import { WeeklyNotebook } from './pages/WeeklyNotebook.tsx';
 import { PageLayout } from './components/PageLayout.tsx';
+import { Assignments } from './pages/Assignments.tsx';
 
 
 function App() {
@@ -20,8 +20,11 @@ function App() {
             <Route path={"/"} element={<PageLayout title="Embedded Systems Capstone Project Website" content={<Overview />}/>} />
             <Route path={`/notes`} element={<PageLayout title="Notes" content={<Notes />}/>} />
             <Route path={`/testing`} element={<PageLayout title="Testing" content={<Testing />}/>} />
-            <Route path={`/debugging`} element={<PageLayout title="Debugging" content={<Debugging />}/>} />
+            <Route path={`/assignments`} element={<PageLayout title="Assignments" content={<Assignments />}/>} />
             <Route path={`/weeklynotebook`} element={<PageLayout title="Weekly Notebook" content={<WeeklyNotebook />}/>} />
+
+            <Route path={`/assignments/projectproposal`} element={<PageLayout title="Project Proposal" content={<Assignments />}/>} />
+            <Route path={`/assignments/projectrequirementsdocument`} element={<PageLayout title="Project Requirements Document" content={<Assignments />}/>} />
           </Routes>
         </div>
       </Router>

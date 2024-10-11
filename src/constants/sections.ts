@@ -1,1 +1,1 @@
-export const sections = ["Overview", "Notes", "Testing", "Debugging", "Weekly Notebook"]
+export const sections = ["Overview", "Notes", "Testing", "Assignments", "Weekly Notebook"]
