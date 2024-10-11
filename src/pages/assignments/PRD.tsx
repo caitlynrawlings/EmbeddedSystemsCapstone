@@ -1,5 +1,5 @@
 import React from "react";
-import { productRequirementDocument } from "../constants/productRequirementsDoc.ts";
+import { productRequirementDocument } from "../../constants/productRequirementsDoc.ts";
 
 export function PRD() {
     return (

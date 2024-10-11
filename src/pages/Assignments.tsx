@@ -9,7 +9,7 @@ export function Assignments() {
                 <div className="flex flex-row items-end my-1 gap-4">
                     <h2 className="font-h2 text-h2 text-nowrap">
                         <a 
-                            href={`/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`}
+                            href={`/#/assignments/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`}
                             className="underline text-blue-800 hover:text-blue-600" 
                         >
                             {assignment.name}
