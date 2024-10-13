@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/EmbeddedSystemsCapstone/static/css/main.878d337a.css",
-    "main.js": "/EmbeddedSystemsCapstone/static/js/main.05e20dd3.js",
+    "main.css": "/EmbeddedSystemsCapstone/static/css/main.9ec7929b.css",
+    "main.js": "/EmbeddedSystemsCapstone/static/js/main.768aff53.js",
     "static/js/453.6d316e1f.chunk.js": "/EmbeddedSystemsCapstone/static/js/453.6d316e1f.chunk.js",
     "index.html": "/EmbeddedSystemsCapstone/index.html",
-    "main.878d337a.css.map": "/EmbeddedSystemsCapstone/static/css/main.878d337a.css.map",
-    "main.05e20dd3.js.map": "/EmbeddedSystemsCapstone/static/js/main.05e20dd3.js.map",
+    "main.9ec7929b.css.map": "/EmbeddedSystemsCapstone/static/css/main.9ec7929b.css.map",
+    "main.768aff53.js.map": "/EmbeddedSystemsCapstone/static/js/main.768aff53.js.map",
     "453.6d316e1f.chunk.js.map": "/EmbeddedSystemsCapstone/static/js/453.6d316e1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.878d337a.css",
-    "static/js/main.05e20dd3.js"
+    "static/css/main.9ec7929b.css",
+    "static/js/main.768aff53.js"
   ]
 }
