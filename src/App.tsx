@@ -4,6 +4,7 @@ import {  HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Overview } from './pages/Overview.tsx';
 import { NavBar } from './components/NavBar.tsx';
 import { PRD } from './pages/assignments/PRD.tsx';
+import { ProjectProposal } from './pages/assignments/ProjectProposal.tsx';
 import { Testing } from './pages/Testing.tsx';
 import { WeeklyNotebook } from './pages/WeeklyNotebook.tsx';
 import { PageLayout } from './components/PageLayout.tsx';
@@ -22,7 +23,7 @@ function App() {
             <Route path={`/assignments`} element={<PageLayout title="Assignments" content={<Assignments />}/>} />
             <Route path={`/weeklynotebook`} element={<PageLayout title="Weekly Notebook" content={<WeeklyNotebook />}/>} />
 
-            <Route path={`/assignments/projectproposal`} element={<PageLayout title="Project Proposal" content={<Assignments />}/>} />
+            <Route path={`/assignments/projectproposal`} element={<PageLayout title="Project Proposal" content={<ProjectProposal />}/>} />
             <Route path={`/assignments/projectrequirementsdocument`} element={<PageLayout title="Project Requirements Document" content={<PRD />}/>} />
           </Routes>
         </div>
