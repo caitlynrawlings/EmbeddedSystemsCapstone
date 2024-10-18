@@ -20,7 +20,7 @@ export function Assignments() {
                 </div>
                 <p className="mb-2">{assignment.description}</p>
 
-                <div className={`${assignment === assignments[assignments.length - 1] ? "hidden" : "border-l border-slate-900 ml-2 h-12"}`}></div>
+                <div className={`${assignment === assignments[assignments.length - 1] ? "hidden" : "border-l border-slate-300 ml-2 h-12"}`}></div>
             </div>
         )
     }

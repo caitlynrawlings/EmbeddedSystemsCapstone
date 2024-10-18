@@ -1,14 +1,37 @@
 export type entry = {
-    day: string;
-    plans: string[];
-    summary: string[];
+    day: string;  // date that weekly notebook is due
+    plans: string[];  // each entry in the array maps to a bullet point
+    summary: string[];  // each entry in the array maps to a paragraph
     images: {fileName: string, caption: string}[];  // fileName should be just the name of the image and the image should be in ./public/images/
     individualContributions : {name: string, work: string}[],
-    sources : string[]
+    sources : string[]  // empty if none
 }
+
+///////////////////////////////////////////
+// Blank notebook entry
+///////////////////////////////////////////
+// {
+//     day : "",
+//     plans: [
+//         ""
+//     ],
+//     summary : [
+//         ""
+//     ],
+//     images : [], 
+//     individualContributions : [
+//         {name: "Anderson", work: ""},
+//         {name: "Caitlyn", work: ""},
+//         {name: "Zach", work: ""},
+//         {name: "Nicholas", work: ""},
+//     ],
+//     sources : [
+//     ]
+// },
+
 export const weeklyNotebooks : entry[] = [
     {
-        day : "October 4th",
+        day : "October 11th",
         plans: [
             "Determine what project we want to make.",
             "Start brainstorming implementation ideas."

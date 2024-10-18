@@ -3,15 +3,15 @@ import { entry, weeklyNotebooks } from "../constants/weeklyNotebooks.ts";
 
 export function WeeklyNotebook() {
     return (
-        <>
+        <div className="flex flex-col items-start">
             {weeklyNotebooks.map((week) => {return EntryLayout(week)})}
-        </>
+        </div>
     )
 }
 
 const EntryLayout = (week: entry) => {
     return (
-        <section className="mb-3">
+        <section className="pt-3 pb-6 w-full border-slate-300 border-b">
             <h2 className="font-h2 text-h2 my-2">{week.day}</h2>
 
             <div className="">
