@@ -31,6 +31,26 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "October 17th",
+        plans: [
+            "Order additional materials.",
+            "Determine what format to send information between microchips.",
+            "Test the IMU and figure out format of its output."
+        ],
+        summary : [
+            "We finished the project proposal and project requirements document. This included refining out project specifications and outlining how we will split the work.",
+            "We received some items that we had bought previously and determined more items that we will need to purchase."
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: "Worked on project proposal and project requirements documents."},
+            {name: "Caitlyn", work: "Worked on project proposal and project requirements documents."},
+            {name: "Zach", work: "Ordered materials and worked on project proposal and project requirements documents."},
+            {name: "Nicholas", work: "Worked on project proposal and project requirements documents."},
+        ],
+        sources : []
+    },
+    {
         day : "October 11th",
         plans: [
             "Determine what project we want to make.",
@@ -59,26 +79,6 @@ export const weeklyNotebooks : entry[] = [
             "https://www.youtube.com/watch?v=1MaKGCPNSJA",
             "https://www.instructables.com/Wireless-Mouse-Glove-1/"
         ]
-    },
-    {
-        day : "October 17th",
-        plans: [
-            "Order additional materials.",
-            "Determine what format to send information between microchips.",
-            "Test the IMU and figure out format of its output."
-        ],
-        summary : [
-            "We finished the project proposal and project requirements document. This included refining out project specifications and outlining how we will split the work.",
-            "We received some items that we had bought previously and determined more items that we will need to purchase."
-        ],
-        images : [], 
-        individualContributions : [
-            {name: "Anderson", work: "Worked on project proposal and project requirements documents."},
-            {name: "Caitlyn", work: "Worked on project proposal and project requirements documents."},
-            {name: "Zach", work: "Ordered materials and worked on project proposal and project requirements documents."},
-            {name: "Nicholas", work: "Worked on project proposal and project requirements documents."},
-        ],
-        sources : []
     },
 
 ]
