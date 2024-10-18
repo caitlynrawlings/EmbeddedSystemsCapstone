@@ -1,10 +1,10 @@
 export type entry = {
-    day: string;
-    plans: string[];
-    summary: string[];
+    day: string;  // date that weekly notebook is due
+    plans: string[];  // each entry in the array maps to a bullet point
+    summary: string[];  // each entry in the array maps to a paragraph
     images: {fileName: string, caption: string}[];  // fileName should be just the name of the image and the image should be in ./public/images/
     individualContributions : {name: string, work: string}[],
-    sources : string[]
+    sources : string[]  // empty if none
 }
 
 ///////////////////////////////////////////
@@ -31,7 +31,7 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
-        day : "October 4th",
+        day : "October 11th",
         plans: [
             "Determine what project we want to make.",
             "Start brainstorming implementation ideas."
@@ -61,20 +61,23 @@ export const weeklyNotebooks : entry[] = [
         ]
     },
     {
-        day : "October 11th",
+        day : "October 17th",
         plans: [
-            ""
+            "Order additional materials.",
+            "Determine what format to send information between microchips.",
+            "Test the IMU and figure out format of its output."
         ],
         summary : [
-            "We ordered items, indcluding"
+            "We finished the project proposal and project requirements document. This included refining out project specifications and outlining how we will split the work.",
+            "We received some items that we had bought previously and determined more items that we will need to purchase."
 
         ],
         images : [], 
         individualContributions : [
-            {name: "Anderson", work: "Ordered items."},
-            {name: "Caitlyn", work: ""},
-            {name: "Zach", work: ""},
-            {name: "Nicholas", work: ""},
+            {name: "Anderson", work: "Worked on project proposal and project requirements documents."},
+            {name: "Caitlyn", work: "Worked on project proposal and project requirements documents."},
+            {name: "Zach", work: "Ordered materials and worked on project proposal and project requirements documents."},
+            {name: "Nicholas", work: "Worked on project proposal and project requirements documents."},
         ],
         sources : []
     },
