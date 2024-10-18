@@ -70,7 +70,6 @@ export const weeklyNotebooks : entry[] = [
         summary : [
             "We finished the project proposal and project requirements document. This included refining out project specifications and outlining how we will split the work.",
             "We received some items that we had bought previously and determined more items that we will need to purchase."
-
         ],
         images : [], 
         individualContributions : [
