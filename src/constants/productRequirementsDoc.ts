@@ -1,13 +1,13 @@
-type prdSection = {name : string; text: string}
+type prdSection = {name : string; format: "paragraphs" | "bullets"; text: string[]}
 
 export const productRequirementDocument: prdSection[] = [
-    {name : "Summary", text: "sample text"},
-    {name : "Deliverables", text: "sample text"},
-    {name : "Critical Features", text: "sample text"},
-    {name : "Performance Metrics", text: "sample text"},
-    {name : "Milestones", text: "sample text"},
-    {name : "Responsibilities of each team member", text: "sample text"},
-    {name : "Materials and outside help", text: "sample text"},
-    {name : "Budget", text: "sample text"},
-    {name : "Risks", text: "sample text"},
+    {name : "Summary", format: "paragraphs", text: ["When presenting from a computer, the presenter’s options are quite limited in how they can interact with their presentation. Either they can stay tethered within reach of their mouse to interact with presentation material and sacrifice stage presence and audience participation, or go untethered and be reduced to the interactivity of a laser pointer or a slide clicker. But what if we could get the best of both worlds?", "Our project is in the form of a glove, but inherits the features of a computer mouse. Through wireless communication, users can utilize intuitive motion controls and natural gestures to control a computer pointer, with an inertial measurement unit removing limits on user orientation relative to the display. Through the touching of various fingers to the user’s thumb, left, right, and middle click can all be emulated, as well as click-and-drag functionality."]},
+    {name : "Deliverables", format: "bullets", text: ["Glove with built-in IMU for mouse movement and intuitive user input for clicking", "USB adapter for ease of use", "Distinctions: Scroll feature; Customizable cursor sensitivity, Other user input via advanced gestures"]},
+    {name : "Critical Features", format: "bullets", text: ["Right and left click", "Click and drag", "Moving mouse via hand movement", "Wearable", "Wireless/mobile"]},
+    {name : "Performance Metrics", format: "bullets", text: ["Battery life", "Pointer precision", "Fitts law", "Reliable clicking"]},
+    {name : "Milestones", format: "paragraphs", text: ["Oct 20:  Understand the how the library interfaces with the IMU", "Oct 22: Rapid prototypes, Documentation", "Oct 23-Nov 5: Get individual pieces working, including clicks registering, bluetooth setup, understanding how the IMU works", "Nov 6-Nov 10: Work on getting peices together, including determining how to send data between microchips and how IMU readings transfer to mouse movement, as well as how to create good form factor", "Nov 12-Nov 18: Testing and ensuring critical features are complete", "Nov 19-Dec 3: Work on distinction features", "Dec 5: Final Demo"]},
+    {name : "Responsibilities of each team member", format: "paragraphs", text: ["Caitlyn: Data collection and transfer (IMU)", "Nicholas: Form factor (3d printing/soldering)", "Zach: Sourcing materials, packet design", "Anderson: Wiring, data interpretation (mouse library)"]},
+    {name : "Materials and outside help", format: "bullets", text: ["IMU", "Microcontrollers", "Gloves", "Wires", "Breadboard", "3d-printer and filament", "Coin cell battery", "Soldering iron and solder", "USB-C cable"]},
+    {name : "Budget", format: "paragraphs", text: ["IMU: $25", "Fabric: $4", "Microcontrollers: $49", "Remaining: $115"]},
+    {name : "Risks", format: "paragraphs", text: ["Risk of shorting components will be addressed by reading the spec.", "Device is not practical or reliable. We will try to address this by making the user input intuitive and consitent. We will test the product with multiple people to best midigate this risk.", "Conductive fabric may not attatch well to the glove or the input is inconsistent. If this occurs, we plan to try using copper pads and wiring in the worst case."]},
 ]
