@@ -39,7 +39,7 @@ const EntryLayout = (week: entry) => {
                     {week.images.map((image, index) => {
                         return (
                             <div className="mb-2 w-full" key={index}>
-                                <img className="h-80" alt={image.caption} src={`${process.env.PUBLIC_URL}/images/${image.fileName}`}/>
+                                <img className="h-80" alt={image.caption} src={`${process.env.PUBLIC_URL}/media/${image.fileName}`}/>
                                 <p className="w-full text-wrap text-sm">{image.caption}</p>
                             </div>
                         )

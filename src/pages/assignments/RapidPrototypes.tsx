@@ -14,7 +14,7 @@ export function RapidPrototype() {
         <div className='flex flex-col mt-3 w-full'>
             {prototype(
                 (<video
-                    src={`${process.env.PUBLIC_URL}/images/animation.mp4`}
+                    src={`${process.env.PUBLIC_URL}/media/animation.mp4`}
                     className='max-h-[20rem]'
                     controls
                 />),
