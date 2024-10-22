@@ -5,6 +5,7 @@ import { Overview } from './pages/Overview.tsx';
 import { NavBar } from './components/NavBar.tsx';
 import { PRD } from './pages/assignments/PRD.tsx';
 import { ProjectProposal } from './pages/assignments/ProjectProposal.tsx';
+import { RapidPrototype } from './pages/assignments/RapidPrototypes.tsx';
 import { Testing } from './pages/Testing.tsx';
 import { WeeklyNotebook } from './pages/WeeklyNotebook.tsx';
 import { PageLayout } from './components/PageLayout.tsx';
@@ -25,6 +26,7 @@ function App() {
 
             <Route path={`/assignments/projectproposal`} element={<PageLayout title="Project Proposal" content={<ProjectProposal />}/>} />
             <Route path={`/assignments/projectrequirementsdocument`} element={<PageLayout title="Project Requirements Document" content={<PRD />}/>} />
+            <Route path={`/assignments/rapidprototypes`} element={<PageLayout title="Rapid Prototypes" content={<RapidPrototype />}/>} />
           </Routes>
         </div>
       </Router>
