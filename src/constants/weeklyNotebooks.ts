@@ -2,7 +2,7 @@ export type entry = {
     day: string;  // date that weekly notebook is due
     plans: string[];  // each entry in the array maps to a bullet point
     summary: string[];  // each entry in the array maps to a paragraph
-    images: {fileName: string, caption: string}[];  // fileName should be just the name of the image and the image should be in ./public/images/
+    images: {fileName: string, caption: string}[];  // fileName should be just the name of the image and the image should be in ./public/media/
     individualContributions : {name: string, work: string}[],
     sources : string[]  // empty if none
 }
