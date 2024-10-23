@@ -11,7 +11,39 @@ export function RapidPrototype() {
         )
     }
     return (
-        <div className='flex flex-col mt-3 w-full'>
+        <div className='flex flex-col mt-3 w-full '>
+            {prototype(
+                (<img
+                    src={`${process.env.PUBLIC_URL}/media/rightClick.jpg`}
+                    className='max-h-[20rem]'
+                    alt="A gloved hand touching index finger to thumb."
+                />),
+                "How we envision the right click user input from the glove to be performed"
+            )}
+            {prototype(
+                (<img
+                    src={`${process.env.PUBLIC_URL}/media/leftClick.jpg`}
+                    className='max-h-[20rem]'
+                    alt="A gloved hand touching middle finger to thumb."
+                />),
+                "How we envision the left click user input from the glove to be performed"
+            )}
+            {prototype(
+                (<img
+                    src={`${process.env.PUBLIC_URL}/media/backOfGlove.jpg`}
+                    className='max-h-[20rem]'
+                    alt="Sketch of the back of the Glove with wires from the finger tips connected to the microcontroller and the IMU connected to the microcontroller."
+                />),
+                "Back of glove"
+            )}
+            {prototype(
+                (<img
+                    src={`${process.env.PUBLIC_URL}/media/frontOfGlove.jpg`}
+                    className='max-h-[20rem]'
+                    alt="Sketch of the front of the Glove with conductive fabric on the finger tips with wires coming from it."
+                />),
+                "Front of glove"
+            )}
             {prototype(
                 (<video
                     src={`${process.env.PUBLIC_URL}/media/animation.mp4`}
