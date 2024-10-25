@@ -10,48 +10,37 @@ export function RapidPrototype() {
             </div>
         )
     }
+
+ 
+
     return (
-        <div className='flex flex-col mt-3 w-full '>
+        <div className='flex flex-col mb-3 w-full gap-2 '>
             {prototype(
                 (<img
-                    src={`${process.env.PUBLIC_URL}/media/rightClick.jpg`}
+                    src={`${process.env.PUBLIC_URL}/media/9DOF_IMU.jpg`}
                     className='max-h-[20rem]'
-                    alt="A gloved hand touching index finger to thumb."
+                    alt=""
                 />),
-                "How we envision the right click user input from the glove to be performed"
+                "Labeled diagram of how things will be connected on the product."
             )}
-            {prototype(
-                (<img
-                    src={`${process.env.PUBLIC_URL}/media/leftClick.jpg`}
-                    className='max-h-[20rem]'
-                    alt="A gloved hand touching middle finger to thumb."
-                />),
-                "How we envision the left click user input from the glove to be performed"
-            )}
-            {prototype(
-                (<img
-                    src={`${process.env.PUBLIC_URL}/media/backOfGlove.jpg`}
-                    className='max-h-[20rem]'
-                    alt="Sketch of the back of the Glove with wires from the finger tips connected to the microcontroller and the IMU connected to the microcontroller."
-                />),
-                "Back of glove"
-            )}
-            {prototype(
-                (<img
-                    src={`${process.env.PUBLIC_URL}/media/frontOfGlove.jpg`}
-                    className='max-h-[20rem]'
-                    alt="Sketch of the front of the Glove with conductive fabric on the finger tips with wires coming from it."
-                />),
-                "Front of glove"
-            )}
-            {prototype(
-                (<video
-                    src={`${process.env.PUBLIC_URL}/media/animation.mp4`}
-                    className='max-h-[20rem]'
-                    controls
-                />),
-                "How we envision the mouse moving from user input."
-            )}
+            <h2 className='font-h2 text-h2 my-2'>Explanation of Parts</h2>
+            <p className='font-normal'>2x Ardunio Nano ESP32 Board</p>
+            <ul>
+                <li>- 1 board connected to computer to receive positional data</li>
+                <li>- 1 board on hand to process machine learning data for gesture recognition</li>
+            </ul>
+            <p className='font-normal'>Adafruit BNO085 IMU Board</p>
+            <ul>
+                <li>- gyroscope and accelerometer</li>
+                <li>- communicates with on-hand ESP via I2C                </li>
+            </ul>
+            <p className='font-normal'>3V Lithium Battery</p>
+            <p>Lithium battery used for powering the device wirelessly. Allows for the remote and mobile feature of the mouse glove while powering the components. Power is limited to 3 volts to restrict the amount of power used for the longevity of the device, as well as the powering of the prototype is set with a low requirement of power.</p>
+            <p className='font-normal'>5mm x 10m Conductive Nylon</p>
+            <p>Used for the connection of components on the glove, allows for the device to interpret controls/commands given by the user. The conductive nylon would be attached to the glove where the important connections would be made on the fingertips of the glove. As of right now, the nylon would run along the backside of the glove from the IMU board (Adafruit BNO085) to the fingertips of the glove. Where the thumb of the glove would be the negative charge and all the other fingers would be the positive charge connected to different ports. Whenever a finger connects/taps to the thumb, a full circuit would be made and give the device a command. Each finger would have its own associated command.</p>
+            <p className='font-normal'>32GB MicroSD card</p>
+            <p>Used for the bluetooth connection between the computer and glove mousing prototype. This card would be used for the bluetooth port that would handle the communication between devices.</p>
+
         </div>
     )
 }

@@ -31,6 +31,26 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "October 24th",
+        plans: [
+            "Interpret readings from IMU to mouse movement",
+            "Connect battery to microcontroller",
+            "Determine how to send data between esp32s"
+        ],
+        summary : [
+            "We connected the IMU to the microcontroller and read the data from it. We also finished the rapid prototypes.",
+        ],
+        images : [{fileName: "connected.jpg", caption: "This is the IMU and microcontroller connected."}], 
+        individualContributions : [
+            {name: "Anderson", work: "Helped solder the IMU to the mircrocontroller."},
+            {name: "Caitlyn", work: "Helped solder the IMU to the mircrocontroller."},
+            {name: "Zach", work: "Helped solder the IMU to the mircrocontroller."},
+            {name: "Nicholas", work: "Helped solder the IMU to the mircrocontroller."},
+        ],
+        sources : [
+        ]
+    },
+    {
         day : "October 17th",
         plans: [
             "Order additional materials.",
