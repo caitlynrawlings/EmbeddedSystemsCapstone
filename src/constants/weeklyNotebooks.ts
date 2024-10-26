@@ -42,10 +42,10 @@ export const weeklyNotebooks : entry[] = [
         ],
         images : [{fileName: "connected.jpg", caption: "This is the IMU and microcontroller connected."}], 
         individualContributions : [
-            {name: "Anderson", work: "Helped solder the IMU to the mircrocontroller."},
+            {name: "Anderson", work: "Helped solder the IMU to the mircrocontroller and battery."},
             {name: "Caitlyn", work: "Helped solder the IMU to the mircrocontroller."},
-            {name: "Zach", work: "Helped solder the IMU to the mircrocontroller."},
-            {name: "Nicholas", work: "Helped solder the IMU to the mircrocontroller."},
+            {name: "Zach", work: "Helped solder the IMU to the mircrocontroller and trouble shooting different connections like UART and I2C."},
+            {name: "Nicholas", work: "Helped solder the IMU to the mircrocontroller and battery."},
         ],
         sources : [
         ]
