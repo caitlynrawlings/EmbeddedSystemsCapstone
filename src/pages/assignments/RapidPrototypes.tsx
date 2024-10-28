@@ -6,7 +6,7 @@ export function RapidPrototype() {
         return (
             <div className='mb-3'>
                 {content}
-                <p className='my-2'>{caption}</p>
+                <p className='mb-2'>{caption}</p>
             </div>
         )
     }
@@ -22,6 +22,14 @@ export function RapidPrototype() {
                     alt=""
                 />),
                 "Labeled diagram of how things will be connected on the product."
+            )}
+            {prototype(
+                (<img
+                    src={`${process.env.PUBLIC_URL}/media/I2C_connection.png`}
+                    className='max-h-[20rem]'
+                    alt=""
+                />),
+                "I2C connection as described here: https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino."
             )}
             <h2 className='font-h2 text-h2 my-2'>Explanation of Parts</h2>
             <p className='font-normal'>2x Ardunio Nano ESP32 Board</p>

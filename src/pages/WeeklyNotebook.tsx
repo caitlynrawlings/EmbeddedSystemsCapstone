@@ -61,7 +61,7 @@ const EntryLayout = (week: entry) => {
                     <ol className="">
                         {week.sources.map((s, index) => {
                             return (
-                                <li>{`(${index+1}) ${s}`}</li>
+                                <li>{`(${index+1}) `}<a className="underline text-blue-800 hover:text-blue-600" href={s}>{s}</a></li>
                             )
                         })}
                     </ol>
