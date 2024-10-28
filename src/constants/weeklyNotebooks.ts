@@ -31,6 +31,28 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "November 1st",
+        plans: [
+            "",
+        ],
+        summary : [
+            "We found out that the mouse library we wanted to use for controlling the mouse was not compatible with the esp32 (1). "
+            + "We found an alternative library that is compatible with esp32 (2), and also a keyboard library that is compatible as well that may be useful (3)."
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: ""},
+            {name: "Caitlyn", work: ""},
+            {name: "Zach", work: ""},
+            {name: "Nicholas", work: ""},
+        ],
+        sources : [
+            "https://www.reddit.com/r/esp32/comments/1bbzp76/mouseh_library_for_esp32/",
+            "https://github.com/T-vK/ESP32-BLE-Mouse",
+            "https://github.com/T-vK/ESP32-BLE-Keyboard"
+        ]
+    },
+    {
         day : "October 24th",
         plans: [
             "Interpret readings from IMU to mouse movement",
