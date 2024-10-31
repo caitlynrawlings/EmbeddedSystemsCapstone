@@ -10,6 +10,7 @@ import { Testing } from './pages/Testing.tsx';
 import { WeeklyNotebook } from './pages/WeeklyNotebook.tsx';
 import { PageLayout } from './components/PageLayout.tsx';
 import { Assignments } from './pages/Assignments.tsx';
+import { ProjectStatus } from './pages/assignments/ProjectStatus.tsx';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path={`/assignments/projectproposal`} element={<PageLayout title="Project Proposal" content={<ProjectProposal />}/>} />
             <Route path={`/assignments/projectrequirementsdocument`} element={<PageLayout title="Project Requirements Document" content={<PRD />}/>} />
             <Route path={`/assignments/rapidprototypes`} element={<PageLayout title="Rapid Prototypes" content={<RapidPrototype />}/>} />
+            <Route path={`/assignments/projectstatuspresentions`} element={<PageLayout title="Project Status" content={<ProjectStatus />}/>} />
           </Routes>
         </div>
       </Router>
