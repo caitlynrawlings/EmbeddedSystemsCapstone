@@ -30,28 +30,31 @@ export type entry = {
 // },
 
 export const weeklyNotebooks : entry[] = [
-    // {
-    //     day : "November 1st",
-    //     plans: [
-    //         "",
-    //     ],
-    //     summary : [
-    //         "We found out that the mouse library we wanted to use for controlling the mouse was not compatible with the esp32 (1). "
-    //         + "We found an alternative library that is compatible with esp32 (2), and also a keyboard library that is compatible as well that may be useful (3)."
-    //     ],
-    //     images : [], 
-    //     individualContributions : [
-    //         {name: "Anderson", work: ""},
-    //         {name: "Caitlyn", work: ""},
-    //         {name: "Zach", work: ""},
-    //         {name: "Nicholas", work: ""},
-    //     ],
-    //     sources : [
-    //         "https://www.reddit.com/r/esp32/comments/1bbzp76/mouseh_library_for_esp32/",
-    //         "https://github.com/T-vK/ESP32-BLE-Mouse",
-    //         "https://github.com/T-vK/ESP32-BLE-Keyboard"
-    //     ]
-    // },
+    {
+        day : "November 1st",
+        plans: [
+            "Optimize tilt to movement settings",
+            "Implement personalized settings",
+            "Test glove clicking functionality",
+        ],
+        summary : [
+            "We found out that the mouse library we wanted to use for controlling the mouse was not compatible with the esp32 (1). "
+            + "We found an alternative library that is compatible with esp32 (2), and also a keyboard library that is compatible as well that may be useful (3).",
+            "We started putting together peices of our prototype like the conductive fabric on the glove, and the microcontroller connections to the battery and IMU."
+        ],
+        images : [{fileName: "spi_wiring.png", caption: "This IMU and microcontroller connected using SPI."}], 
+        individualContributions : [
+            {name: "Anderson", work: "Worked on testing conductive fabric connections and soldering wire to conductive fabric on glove. Helped with midpoint progress presentation."},
+            {name: "Caitlyn", work: "Tested mouse libraries to find one compatable with esp32. Helped test conductive fabric connections. Helped with midpoint progress presentation."},
+            {name: "Zach", work: "Resoldered the esp32 to the IMU using the SPI connection. Connected the battery to the esp32 to power it. Helped with midpoint progress presentation."},
+            {name: "Nicholas", work: "Worked on testing conductive fabric connections and soldering wire to conductive fabric on glove. Helped with midpoint progress presentation."},
+        ],
+        sources : [
+            "https://www.reddit.com/r/esp32/comments/1bbzp76/mouseh_library_for_esp32/",
+            "https://github.com/T-vK/ESP32-BLE-Mouse",
+            "https://github.com/T-vK/ESP32-BLE-Keyboard"
+        ]
+    },
     {
         day : "October 24th",
         plans: [
