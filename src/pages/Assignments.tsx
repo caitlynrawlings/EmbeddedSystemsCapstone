@@ -11,7 +11,7 @@ export function Assignments() {
                 <div className="flex flex-row items-end my-1 gap-4">
                     <h2 className="font-h2 text-h2 text-nowrap">
                         <button 
-                            onClick={() => navigate(`/assignments/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`)}
+                            onClick={() => assignment.link ? window.open(assignment.link) : navigate(`/assignments/${encodeURIComponent(assignment.name.toLowerCase().replace(/\s/g, ''))}`)}
                             className="underline text-blue-800 hover:text-blue-600" 
                         >
                             {assignment.name}
