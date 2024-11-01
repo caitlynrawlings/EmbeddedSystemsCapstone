@@ -42,7 +42,11 @@ export const weeklyNotebooks : entry[] = [
             + "We found an alternative library that is compatible with esp32 (2), and also a keyboard library that is compatible as well that may be useful (3).",
             "We started putting together peices of our prototype like the conductive fabric on the glove, and the microcontroller connections to the battery and IMU."
         ],
-        images : [{fileName: "spi_wiring.png", caption: "This IMU and microcontroller connected using SPI."}], 
+        images : [
+            {fileName: "spi_wiring.png", caption: "This IMU and microcontroller connected using SPI."},
+            {fileName: "spi_with_battery.png", caption: "This is the SPI connection with the battery also attached."},
+            {fileName: "glove1.png", caption: "This is the glove with conductive fabric on it and wires soldered to the conductive fabric on the back side of the glove."},
+        ], 
         individualContributions : [
             {name: "Anderson", work: "Worked on testing conductive fabric connections and soldering wire to conductive fabric on glove. Helped with midpoint progress presentation."},
             {name: "Caitlyn", work: "Tested mouse libraries to find one compatable with esp32. Helped test conductive fabric connections. Helped with midpoint progress presentation."},
