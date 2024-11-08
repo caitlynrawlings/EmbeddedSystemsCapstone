@@ -31,6 +31,28 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "November 8th",
+        plans: [
+            "Print and test 3D printed case for holding micorocontroller, battery, and IMU",
+            "Work on tilt to movement settings",
+            "Test glove clicking functionality",
+        ],
+        summary : [
+            "We finished soldering the wires to conductive fabric on glove for all digits. Ironed out ideas for finger connection to correponding button functionality. Now that these are both complete we can start testing the button code we wrote with the glove.",
+            "We created the content for the kickstarter-style website and published it.",
+            "Brainstormed ideas for 3D printed case and started intial designs for 3D printed case."
+        ],
+        images : [{fileName: "wires_everywhere.jpg", caption: "Soldering wires to conductive fabric on glove for all digits."}], 
+        individualContributions : [
+            {name: "Anderson", work: "Soldered wires to conductive fabric on glove for all digits. Modeled the glove for the kickstarter website. Starting design for 3D printed case."},
+            {name: "Caitlyn", work: "Worked on editing the ML code for our purposes. Brainstormed button functionality and started coding the 'clicking' logic."},
+            {name: "Zach", work: "Testing IMU for mouse movement functionality. Tested IMU functionality with different wirings after it stopped working. Ordered new IMU."},
+            {name: "Nicholas", work: "Designed and created kickstarter style website for our product. Brainstormed ideas for 3D printed case and button functionalities."},
+        ],
+        sources : [
+        ]
+    },
+    {
         day : "November 1st",
         plans: [
             "Optimize tilt to movement settings",
