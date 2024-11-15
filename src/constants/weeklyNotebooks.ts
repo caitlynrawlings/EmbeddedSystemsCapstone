@@ -31,6 +31,27 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "November 14th",
+        plans: [
+            "Get everything wired",
+            "Initial prototype for case for hardware",
+            "Start collecting data for ML gesture training"
+        ],
+        summary : [
+            "We fully setup the software for collecting the data for ML gesture training.",
+            "We started designing the 3D printed case for holding the microcontroller, battery, and IMU.",
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: "Working on designing case for the microcontroller, battery, and IMU."},
+            {name: "Caitlyn", work: "Completed the code for collecting data for ML gesture training. Refining clicking code logic."},
+            {name: "Zach", work: "Work on soldering the IMU and microcontroller, as well as battery component."},
+            {name: "Nicholas", work: "Working on designing case for the microcontroller, battery, and IMU."},
+        ],
+        sources : [
+        ]
+    },
+    {
         day : "November 8th",
         plans: [
             "Print and test 3D printed case for holding micorocontroller, battery, and IMU",
