@@ -3,7 +3,17 @@ LABELS = [
   'back',
   'forward',
   'escape',
-  'null'
+  'rightClick',
+  'leftClick',
+  'ringFinger',
+  'pinkyFinger',
+  'clickAndDrag',
+  'upDown',
+  'leftRight',
+  'inOut',
+  'walking',
+  'talkWithHands',
+  'generalMouseMovement'
 ]
 
 # directory to record to

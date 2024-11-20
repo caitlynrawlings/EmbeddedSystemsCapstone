@@ -10,6 +10,12 @@
 Adafruit_BNO08x bno08x(BNO08X_RESET);
 sh2_SensorValue_t sensorValue;
 
+struct euler_t {
+  float yaw;
+  float pitch;
+  float roll;
+} ypr;
+
 
 void setup() {
   Serial.begin(115200);
@@ -32,11 +38,36 @@ void setup() {
 
 }
 
-void setReports(void) {
+void setReports() {
   Serial.println("Setting desired reports");
-  if (!bno08x.enableReport(SH2_ACCELEROMETER)) {
-    Serial.println("Could not enable accelerometer");
+  if (! bno08x.enableReport(SH2_ARVR_STABILIZED_RV, 5000)) {
+    Serial.println("Could not enable stabilized remote vector");
   }
+  if (!bno08x.enableReport(SH2_LINEAR_ACCELERATION, 5000)) {
+    Serial.println("Could not enable linear acceleration");
+  }
+}
+
+void quaternionToEuler(float qr, float qi, float qj, float qk, euler_t* ypr, bool degrees = false) {
+
+    float sqr = sq(qr);
+    float sqi = sq(qi);
+    float sqj = sq(qj);
+    float sqk = sq(qk);
+
+    ypr->yaw = atan2(2.0 * (qi * qj + qk * qr), (sqi - sqj - sqk + sqr));
+    ypr->pitch = asin(-2.0 * (qi * qk - qj * qr) / (sqi + sqj + sqk + sqr));
+    ypr->roll = atan2(2.0 * (qj * qk + qi * qr), (-sqi - sqj + sqk + sqr));
+
+    if (degrees) {
+      ypr->yaw *= RAD_TO_DEG;
+      ypr->pitch *= RAD_TO_DEG;
+      ypr->roll *= RAD_TO_DEG;
+    }
+}
+
+void quaternionToEulerRV(sh2_RotationVectorWAcc_t* rotational_vector, euler_t* ypr, bool degrees = false) {
+    quaternionToEuler(rotational_vector->real, rotational_vector->i, rotational_vector->j, rotational_vector->k, ypr, degrees);
 }
 
 void loop() {
@@ -50,16 +81,48 @@ void loop() {
     return;
   }
 
-  Serial.print(sensorValue.un.accelerometer.x);
-  Serial.print("\t");
-  Serial.print(sensorValue.un.accelerometer.y);
-  Serial.print("\t");
-  Serial.print(sensorValue.un.accelerometer.z);
-  Serial.println("");
-  // Serial.print("Accelerometer - x: ");
-  // Serial.print(sensorValue.un.accelerometer.x);
-  // Serial.print(" y: ");
-  // Serial.print(sensorValue.un.accelerometer.y);
-  // Serial.print(" z: ");
-  // Serial.println(sensorValue.un.accelerometer.z);
+  static float acc_x;
+  static float acc_y;
+  static float acc_z;
+
+  static bool accel_found = false;
+  static bool arvr_found = false;
+  switch (sensorValue.sensorId) {
+    case SH2_LINEAR_ACCELERATION:
+      if (!accel_found) {
+        acc_x = sensorValue.un.accelerometer.x;
+        acc_y = sensorValue.un.accelerometer.y;
+        acc_z = (sensorValue.un.accelerometer.z);
+        accel_found = true;
+      }
+      break;
+    case SH2_ARVR_STABILIZED_RV:
+      if (!arvr_found) {
+        quaternionToEulerRV(&sensorValue.un.arvrStabilizedRV, &ypr, true);
+        arvr_i = (ypr.yaw);
+        arvr_j = (ypr.pitch);
+        arvr_k = (ypr.roll);
+        arvr_found = true;
+      }
+      break;
+  }
+
+  if (arvr_found && accel_found) {
+    arvr_found = false;
+    accel_found = false;
+    Serial.print(acc_x);
+    Serial.print("\t");
+    Serial.print(acc_y);
+    Serial.print("\t");
+    Serial.print(acc_z);
+    Serial.print("\t");
+    Serial.print(ypr.yaw);
+    Serial.print("\t");
+    Serial.print(ypr.pitch);
+    Serial.print("\t");
+    Serial.print(ypr.roll);
+    Serial.println("");
+  }
+
+
 }
