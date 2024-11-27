@@ -2,6 +2,8 @@
 #include "model.h"
 
 #include <Adafruit_BNO08x.h>
+#include <BleCombo.h>
+
 
 // For SPI mode, we need a CS pin
 #define BNO08X_CS D10
@@ -9,6 +11,8 @@
 
 // For SPI mode, we also need a RESET
 #define BNO08X_RESET D7 //D5
+
+BleMouse bleMouse;
 
 Adafruit_BNO08x bno08x(BNO08X_RESET);
 sh2_SensorValue_t sensorValue;
@@ -37,6 +41,8 @@ void setup() {
   while(!Serial);
   delay(1000);
   Serial.println("Serial is ready");
+
+  bleMouse.begin();
 
   // set up IMU
   while (!bno08x.begin_SPI(BNO08X_CS, BNO08X_INT)) {
@@ -189,6 +195,7 @@ void determine_gesture() {
       // run model inference
       const int32_t prediction = model_predict(features, 24);
       Serial.println(prediction);
+      handle
 
       // slide the window
       xs.clear();
