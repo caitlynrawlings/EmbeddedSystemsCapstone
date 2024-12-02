@@ -31,6 +31,25 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "November 29th",
+        plans: [
+            "Collect more data",
+            "Connect all peices"
+        ],
+        summary : [
+            "Worked on button logic, custom sensitivity, and mouse movement."
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: "Collected data."},
+            {name: "Caitlyn", work: "Worked on ml and collected data."},
+            {name: "Zach", work: "Worked on button logic and resets mouse directionality logic."},
+            {name: "Nicholas", work: "Worked on custom sensitivity and collected data."},
+        ],
+        sources : [
+        ]
+    },
+    {
         day : "November 21st",
         plans: [
             "Get ML working",
