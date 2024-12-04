@@ -267,8 +267,6 @@ void determineGesture() {
   bool accel_found = false;
   bool arvr_found = false;
   int stopedFor = 0;
-  Serial.print("started calc: ");
-      Serial.println(millis());
 
   while (xs.count() < window_size) {
     if (!bno08x.getSensorEvent(&sensorValue)) {
@@ -286,6 +284,10 @@ void determineGesture() {
         break;
     }
 
+    if (!bno08x.getSensorEvent(&sensorValue)) {
+      return;
+    }
+
     switch (sensorValue.sensorId) {
       case SH2_ARVR_STABILIZED_RV:
         if (!arvr_found) {
@@ -296,8 +298,7 @@ void determineGesture() {
     }
 
 
-    if ((x > -1 && x < 1) && y > -1 && y < 1 && z > -1 && z < 1) {
-      Serial.println("auto stop");
+    if (x > -1 && x < 1 && y > -1 && y < 1 && z > -1 && z < 1) {
       stopedFor += 1;
     }
 
@@ -313,7 +314,7 @@ void determineGesture() {
       rolls.add(ypr.roll);
     }
 
-    if (xs.count() >= window_size || stopedFor > 10) {
+    if (xs.count() >= window_size || stopedFor > 5) {
       //
       
       // extract statistical features
@@ -358,9 +359,6 @@ void determineGesture() {
         Mouse.click(MOUSE_FORWARD);
         break;
     }
-
-      Serial.print("ended calc: ");
-      Serial.println(millis());
 
       // slide the window
       xs.clear();
