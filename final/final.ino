@@ -317,7 +317,7 @@ void determineGesture() {
       rolls.add(ypr.roll);
     }
 
-    if (xs.count() >= window_size || stopedFor > 5) {
+    if (xs.count() >= window_size || stopedFor > 2) {
       //
       
       // extract statistical features
