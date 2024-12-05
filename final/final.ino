@@ -117,7 +117,7 @@ void loop() {
       accel.z = sensorValue.un.accelerometer.z;
 
       // if moving a certain amount then check for gestures
-      if (accel.x > 6 || accel.y > 6 || accel.z > 6) {
+      if (accel.x > 6 || accel.y > 6 || accel.z > 6 || accel.x < -6 || accel.y < -6 || accel.z < -6) {
         Serial.println("derterming gesture");
         determineGesture();
       }
@@ -301,7 +301,6 @@ void determineGesture() {
 
 
     if ((x > -1 && x < 1) && y > -1 && y < 1 && z > -1 && z < 1) {
-      Serial.println("auto stop");
       stopedFor += 1;
     }
 
