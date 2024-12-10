@@ -31,13 +31,38 @@ export type entry = {
 
 export const weeklyNotebooks : entry[] = [
     {
+        day : "December 6th",
+        plans: [
+            "Improve ML accuracy",
+            "Finalize physical form",
+            "Compare glove to other mouse options using Fitts's law",
+            "Finish technical report"
+        ],
+        summary : [
+            "We changed the ML gestures by changing the gestures to be more distinct from one another and using different data collection from the IMU. This improved the ML accuracy significantly. We also fixed the delay at the end of ML gestures registering by stopping data collection for interpreting gestures when the acceleromter data reads as being still.",
+            "Incooperated sensitivty settings into the glove and optimized to be more intuitive. Used sensitivty for customizing scroll and mouse movement.",
+            "Completed Fitts's law tests using glove and laptop touchpad for comparison.",
+            "Glued the components into the case to secure them for the presentation."
+        ],
+        images : [], 
+        individualContributions : [
+            {name: "Anderson", work: "Soldered components for final glove form and helped with Fitts's law testing."},
+            {name: "Caitlyn", work: "Worked on ML gestures and helped with cusor sensitivity."},
+            {name: "Zach", work: "Helped with Fitts's law testing. Secured components into case and worked on custom cursor sensitivity."},
+            {name: "Nicholas", work: "Helped with finalizing the physical form, recording demo videos, and polishing kick-starter style website."},
+        ],
+        sources : [
+        ]
+    },
+    {
         day : "November 29th",
         plans: [
             "Collect more data",
             "Connect all peices"
         ],
         summary : [
-            "Worked on button logic, custom sensitivity, and mouse movement."
+            "Worked on button logic, custom sensitivity, and mouse movement.",
+            "We also tested the gloves wireless capabilities."
         ],
         images : [], 
         individualContributions : [
