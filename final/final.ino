@@ -8,6 +8,8 @@
  *  BleCombo Mouse and Keyboard - https://github.com/blackketter/ESP32-BLE-Combo
  *  emlearn - https://emlearn.readthedocs.io/en/latest/#
  *
+ *  Machine Learning code adapted from Richard Li, https://github.com/lichard49/ECE475_on_device_ml_tutorial/tree/main
+ *
  *  Written by Anderson Lu, Caitlyn Rawlings, Zachary Wittgens, and Nicholas Wolff
  */
 
