@@ -1,10 +1,19 @@
+/*
+ *  Final source code for ECE475 AU24 Group 8
+ *  This code provides implementation for the Infinity Glove,
+ *  a glove that can be utilized as a Bluetooth-enabled mouse.
+ *
+ *  This code draws from several public libraries:
+ *  Adafruit BNO085 IMU - https://github.com/adafruit/Adafruit_BNO08x
+ *  BleCombo Mouse and Keyboard - https://github.com/blackketter/ESP32-BLE-Combo
+ *  emlearn - https://emlearn.readthedocs.io/en/latest/#
+ *
+ *  Written by Anderson Lu, Caitlyn Rawlings, Zachary Wittgens, and Nicholas Wolff
+ */
+
 #include "Statistic.h"
 #include "model.h"
 
-//#include <BleConnectionStatus.h>
-//#include <KeyboardOutputCallbacks.h>
-
-//#include <Arduino.h>
 #include <Adafruit_BNO08x.h>
 #include <BleCombo.h>
 
